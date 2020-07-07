@@ -1,10 +1,11 @@
 #!/bin/bash
 
+IMAGE=library/postgres:12
+CONTAINER_NAME=postgres
+
 POSTGRES_USER=postgres
 POSTGRES_PASSWORD=password
 POSTGRES_DB=postgres
-
-CONTAINER_NAME=postgres
 
 docker create \
     --name=$CONTAINER_NAME \
@@ -12,6 +13,6 @@ docker create \
     -e POSTGRES_PASSWORD=$POSTGRES_PASSWORD \
     -e POSTGRES_DB=$POSTGRES_DB \
     -p 5432:5432 \
-    library/postgres:12
+    $IMAGE
 
 docker start $CONTAINER_NAME
