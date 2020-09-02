@@ -1,6 +1,7 @@
 #!/bin/bash
 
-IMAGE=linuxserver/letsencrypt:latest
+# IMAGE=linuxserver/letsencrypt:latest
+IMAGE=linuxserver/swag:latest
 CONTAINER_NAME=nginx
 DOMAIN=corye.me
 
